@@ -1253,7 +1253,7 @@ async function loadHomeProducts() {
     allProducts = products;
     const activeProducts = products.filter(p => p.status === 'active');
     document.getElementById('stat-products').textContent = activeProducts.length;
-    const list = activeProducts.slice(0, 4);
+    const list = activeProducts; //.slice(0, 4);
     const el = document.getElementById('home-products');
     if (list.length) {
       el.innerHTML = list.map(productCard).join('');
